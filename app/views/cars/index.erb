@@ -1,6 +1,7 @@
 <%@cars.each do |car|%>
-  <%=car.make%><br>
-  <%=car.name%><br>
-  <%=car.year%><br>
-  Edit: <a href = "/cars/<%=club.id%>/edit"><%=car.name%></a><br>
+  Make:<%=car.make%><br>
+  Name:<%=car.name%><br>
+  Year:<%=car.year%><br>
+  Owner:<%=car.user.username%><br>
+  Edit: <a href = "/cars/<%=club.id%>/edit"><%=car.name%></a><br><br>
 <%end%>
