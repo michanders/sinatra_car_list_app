@@ -9,6 +9,9 @@
       <%if logged_in?%>
         <a href="/cars/new"> Create Cars </a>
         <a href="/logout"> Log Out </a>
+        <a href="/"> Home </a>
+        <a href="/cars"> All Cars </a>
+        <a href="/users/<%=current_user.id%>"> My Cars </a>
       <%else%>
         <a href="/signup">Sign Up</a>
         <a href="/login"> Sign In </a>

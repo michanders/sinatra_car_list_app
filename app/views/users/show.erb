@@ -1,10 +1,12 @@
 <h1>List of your cars, <%=@user.username%></h1>
 <h2>
-  <%@user.cars.each do |car|%>
-    <ol>
-      <li><a href = "/cars/<%=car.id%>"><%=car.name%></a></li><br>
-      <li>Edit: <a href = "/cars/<%=car.id%/edit>"><%=car.name%></a></li><br>
-      <li><a href = "/cars/new">Add a new Car</a></li><br>
-    </ol>
+  <%if @user.cars.length >= 1%>
+    <%@user.cars.each do |car|%>
+      <ol>
+        <li><a href = "/cars/<%=car.id%>"><%=car.name%></a></li><br>
+        <li>Edit: <a href = "/cars/<%=car.id%>/edit"><%=car.name%></a></li><br>
+      </ol>
+    <%end%>
   <%end%>
+  <a href = "/cars/new">Add a new Car</a><br>
 </h2>

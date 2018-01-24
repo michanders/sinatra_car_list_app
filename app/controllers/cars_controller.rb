@@ -8,6 +8,7 @@ class CarsController < ApplicationController
 
   get "/cars/new" do
     redirect_if_not_logged_in
+
     erb :"/cars/new"
   end
 
