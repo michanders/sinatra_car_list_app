@@ -2,15 +2,15 @@
 
 <h2><form action = "/cars" method = "post">
   Car Make:<br>
-  <input type = "text" name = "make"><br>
+  <input type = "text" name = "make"><br><br>
   Car Name:<br>
-  <input type = "text" name = "name"><br>
+  <input type = "text" name = "name"><br><br>
   Car year:<br>
-  <input type = "number" name = "year"><br>
+  <input type = "number" name = "year"><br><br>
   Who Owns the Car?<br>
   <select name = "user_id">
     <option value = "<%=current_user.id%>"><%=current_user.username%></option>
-  </select>
+  </select><br><br>
 
   <input type="submit" value="submit">
 </form></h2>

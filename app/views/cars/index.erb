@@ -1,7 +1,12 @@
+<br><br>
 <%@cars.each do |car|%>
-  Make:<%=car.make%><br>
-  Name:<%=car.name%><br>
-  Year:<%=car.year%><br>
-  Owner:<%=car.user.username%><br>
-  Edit: <a href = "/cars/<%=car.id%>/edit"><%=car.name%></a><br><br>
+  Make: <%=car.make%><br>
+  Model: <%=car.name%><br>
+  Year: <%=car.year%><br>
+  Owner:
+  <%if logged_in? && current_user.username == car.user.username%>
+    <a href = "/users/<%=current_user.id%>"><%=car.user.username%></a><br>
+  <%else%>
+    <%=car.user.username%><br>
+  <%end%><br><br>
 <%end%>

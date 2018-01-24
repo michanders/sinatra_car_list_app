@@ -2,11 +2,11 @@
 <h2>
   <%if @user.cars.length >= 1%>
     <%@user.cars.each do |car|%>
-      <ol>
-        <li><a href = "/cars/<%=car.id%>"><%=car.name%></a></li><br>
-        <li>Edit: <a href = "/cars/<%=car.id%>/edit"><%=car.name%></a></li><br>
-      </ol>
+      <ul>
+        <li><%=car.make%>: <a href = "/cars/<%=car.id%>"><%=car.name%></a></li>
+          <a href = "/cars/<%=car.id%>/edit">Edit</a><br><br>
+      </ul>
     <%end%>
-  <%end%>
+  <%end%><br>
   <a href = "/cars/new">Add a new Car</a><br>
 </h2>
