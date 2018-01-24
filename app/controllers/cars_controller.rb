@@ -8,12 +8,14 @@ class CarsController < ApplicationController
 
   get "/cars/new" do
     redirect_if_not_logged_in
+    @error = params[:error]
 
     erb :"/cars/new"
   end
 
   get "/cars/:id/edit" do
     redirect_if_not_logged_in
+    @error = params[:error]
     @car = Car.find_by_id(params[:id])
     erb :"/cars/edit"
   end

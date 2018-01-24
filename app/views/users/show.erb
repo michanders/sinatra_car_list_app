@@ -1,12 +1,11 @@
-<h1>List of your cars, <%=@user.username%></h1>
+<br>
+<h1>List of your cars, <%=@user.username%>:</h1>
 <h2>
   <%if @user.cars.length >= 1%>
     <%@user.cars.each do |car|%>
       <ul>
-        <li><%=car.make%>: <a href = "/cars/<%=car.id%>"><%=car.name%></a></li>
-          <a href = "/cars/<%=car.id%>/edit">Edit</a><br><br>
+        <li><%=car.make%>: <a href = "/cars/<%=car.id%>"><%=car.name%></a></li><br>
       </ul>
     <%end%>
-  <%end%><br>
-  <a href = "/cars/new">Add a new Car</a><br>
+  <%end%>
 </h2>

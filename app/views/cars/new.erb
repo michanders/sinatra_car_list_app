@@ -1,13 +1,13 @@
-<h1>Add a New Car</h1>
+<h2>Add a New Car</h2>
 
 <h2><form action = "/cars" method = "post">
   Car Make:<br>
   <input type = "text" name = "make"><br><br>
-  Car Name:<br>
+  Car Model:<br>
   <input type = "text" name = "name"><br><br>
   Car year:<br>
   <input type = "number" name = "year"><br><br>
-  Who Owns the Car?<br>
+  Car Owner?<br>
   <select name = "user_id">
     <option value = "<%=current_user.id%>"><%=current_user.username%></option>
   </select><br><br>
